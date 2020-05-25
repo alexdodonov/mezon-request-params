@@ -1,0 +1,30 @@
+{
+	"name": "mezon/request-params",
+	"description": "Small script for parameters fetcher",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Dodonov Alexey",
+			"email": "alexey@dodonov.pro",
+			"homepage": "http://gdzone.ru",
+			"role": "Founder"
+		}
+	],
+	"require": {
+		"php": ">=7.2.0",
+		"mezon/router" : "^1.0"
+	},
+	"support": {
+		"email": "alexey@dodonov.pro",
+		"issues": "https://github.com/alexdodonov/mezon-request-params/issues",
+		"source": "https://github.com/alexdodonov/mezon-request-params"
+	},
+	"minimum-stability": "dev",
+	"homepage": "https://github.com/alexdodonov/mezon-request-params",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"Mezon\\Transport\\": ""
+		}
+	}
+}
