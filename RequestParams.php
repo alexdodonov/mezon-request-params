@@ -22,7 +22,7 @@ abstract class RequestParams implements \Mezon\Transport\RequestParamsInterface
      *
      * @var \Mezon\Router\Router
      */
-    private $router = false;
+    private $router = null;
 
     /**
      * Constructor
@@ -40,7 +40,7 @@ abstract class RequestParams implements \Mezon\Transport\RequestParamsInterface
      *
      * @return \Mezon\Router\Router
      */
-    public function getRouter(): \Mezon\Router\Router
+    public function getRouter(): ?\Mezon\Router\Router
     {
         return $this->router;
     }
