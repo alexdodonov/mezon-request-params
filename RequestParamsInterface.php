@@ -24,7 +24,7 @@ interface RequestParamsInterface
      *            parameter name
      * @param mixed $default
      *            default value
-     * @return mixed Parameter value
+     * @return mixed Parameter value, if the value was not found, then $default value will be returned
      */
     public function getParam($param, $default = false);
 }
