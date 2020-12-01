@@ -46,6 +46,14 @@ abstract class RequestParams implements RequestParamsInterface
     {
         return $this->router;
     }
-    
-    
+
+    /**
+     *
+     * {@inheritdoc}
+     * @see RequestParamsInterface::wasSubmitted()
+     */
+    public function wasSubmitted(string $param): bool
+    {
+        return $this->getParam($param, false) !== false;
+    }
 }
