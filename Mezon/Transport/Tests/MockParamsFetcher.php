@@ -1,6 +1,8 @@
 <?php
 namespace Mezon\Transport\Tests;
 
+use Mezon\Transport\RequestParamsInterface;
+
 /**
  * Mock parameter fetcher
  *
@@ -29,15 +31,11 @@ class MockParamsFetcher implements \Mezon\Transport\RequestParamsInterface
     }
 
     /**
-     * Method returns request parameter
      *
-     * @param string $param
-     *            parameter name
-     * @param mixed $default
-     *            default value
-     * @return mixed Parameter value
+     * {@inheritdoc}
+     * @see RequestParamsInterface::getParam()
      */
-    public function getParam($param, $default = false)
+    public function getParam(string $param, $default = false)
     {
         if (isset($_POST[$param])) {
             return $_POST[$param];
@@ -46,5 +44,15 @@ class MockParamsFetcher implements \Mezon\Transport\RequestParamsInterface
         }
 
         return $this->value;
+    }
+
+    /**
+     *
+     * {@inheritdoc}
+     * @see RequestParamsInterface::wasSubmitted()
+     */
+    public function wasSubmitted(string $param): bool
+    {
+        return $this->getParam($param, false) !== false;
     }
 }

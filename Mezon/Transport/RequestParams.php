@@ -1,6 +1,8 @@
 <?php
 namespace Mezon\Transport;
 
+use Mezon\Router\Router;
+
 /**
  * Interface RequestParamsInterface
  *
@@ -14,7 +16,7 @@ namespace Mezon\Transport;
 /**
  * Request params fetcher
  */
-abstract class RequestParams implements \Mezon\Transport\RequestParamsInterface
+abstract class RequestParams implements RequestParamsInterface
 {
 
     /**
@@ -27,10 +29,10 @@ abstract class RequestParams implements \Mezon\Transport\RequestParamsInterface
     /**
      * Constructor
      *
-     * @param \Mezon\Router\Router $router
+     * @param Router $router
      *            Router object
      */
-    public function __construct(\Mezon\Router\Router &$router)
+    public function __construct(Router &$router)
     {
         $this->router = $router;
     }
@@ -38,10 +40,12 @@ abstract class RequestParams implements \Mezon\Transport\RequestParamsInterface
     /**
      * Method returns router
      *
-     * @return \Mezon\Router\Router
+     * @return Router
      */
-    public function getRouter(): ?\Mezon\Router\Router
+    public function getRouter(): ?Router
     {
         return $this->router;
     }
+    
+    
 }

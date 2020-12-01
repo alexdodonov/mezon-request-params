@@ -26,5 +26,14 @@ interface RequestParamsInterface
      *            default value
      * @return mixed Parameter value, if the value was not found, then $default value will be returned
      */
-    public function getParam($param, $default = false);
+    public function getParam(string $param, $default = false);
+
+    /**
+     * Method validates was the parameter submitted
+     *
+     * @param string $param
+     *            parameter name
+     * @return bool true if the parameter was submitted
+     */
+    public function wasSubmitted(string $param): bool;
 }
