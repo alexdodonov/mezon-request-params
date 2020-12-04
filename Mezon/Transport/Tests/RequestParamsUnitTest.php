@@ -18,7 +18,6 @@ class RequestParamsUnitTest extends TestCase
     {
         $fetcher = new MockParamsFetcher();
 
-        $this->assertEquals(1, $fetcher->getParam('some-param'));
-        $this->assertInstanceOf(Router::class, $fetcher->getRouter());
+        $this->assertEquals('value', $fetcher->getParam('some-param'));
     }
 }

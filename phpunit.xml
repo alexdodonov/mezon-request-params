@@ -16,11 +16,7 @@
 
 	<filter>
 		<whitelist>
-			<directory>./</directory>
-			<exclude>
-				<directory suffix="Test.php">./</directory>
-				<directory>vendor</directory>
-			</exclude>
+			<directory>./Mezon/Transport/</directory>
 		</whitelist>
 	</filter>
 
@@ -30,9 +26,4 @@
 		<log type="coverage-text" target="php://stdout"
 			showOnlySummary="true"></log>
 	</logging>
-	<groups>
-		<exclude>
-			<group>baseTests</group>
-		</exclude>
-	</groups>
 </phpunit>

@@ -9,7 +9,7 @@ use Mezon\Transport\RequestParamsInterface;
  * @author Dodonov A.A.
  * @group baseTests
  */
-class MockParamsFetcher implements \Mezon\Transport\RequestParamsInterface
+class MockParamsFetcher implements RequestParamsInterface
 {
 
     /**
