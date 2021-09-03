@@ -22,7 +22,7 @@ abstract class RequestParams implements RequestParamsInterface
     /**
      * Router of the transport
      *
-     * @var \Mezon\Router\Router
+     * @var ?Router
      */
     private $router = null;
 

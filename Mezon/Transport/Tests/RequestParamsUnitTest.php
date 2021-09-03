@@ -7,6 +7,7 @@ use Mezon\Router\Router;
 /**
  *
  * @author Dodonov A.A.
+ * @psalm-suppress PropertyNotSetInConstructor
  */
 class RequestParamsUnitTest extends TestCase
 {

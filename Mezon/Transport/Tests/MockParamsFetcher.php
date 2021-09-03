@@ -17,7 +17,7 @@ class MockParamsFetcher implements RequestParamsInterface
      *
      * @var string
      */
-    protected $value = false;
+    protected $value = '';
 
     /**
      * Constructor
