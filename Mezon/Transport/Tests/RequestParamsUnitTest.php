@@ -17,8 +17,49 @@ class RequestParamsUnitTest extends TestCase
      */
     public function testConstructor(): void
     {
-        $fetcher = new MockParamsFetcher();
+        // setup
+        $router = new Router();
+        $fetcher = new RequestParamsTest($router);
 
-        $this->assertEquals('value', $fetcher->getParam('some-param'));
+        // test body
+        $newRouter = $fetcher->getRouter();
+
+        // assertions
+        $this->assertInstanceOf(Router::class, $newRouter);
+        $this->assertEquals($router, $newRouter);
+    }
+
+    /**
+     * Testing that param was submitted
+     */
+    public function testWasSubmitted(): void
+    {
+        // setup
+        $router = new Router();
+        $fetcher = new RequestParamsTest($router);
+        $_GET['param'] = 1;
+
+        // test body
+        $value = $fetcher->wasSubmitted('param');
+
+        // assertions
+        $this->assertTrue($value);
+    }
+
+    /**
+     * Testing that param was not submitted
+     */
+    public function testWasNotSubmitted(): void
+    {
+        // setup
+        $router = new Router();
+        $fetcher = new RequestParamsTest($router);
+        unset($_GET['param']);
+
+        // test body
+        $value = $fetcher->wasSubmitted('param');
+
+        // assertions
+        $this->assertFalse($value);
     }
 }
