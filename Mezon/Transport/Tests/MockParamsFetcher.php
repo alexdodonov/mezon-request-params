@@ -15,14 +15,14 @@ class MockParamsFetcher implements RequestParamsInterface
     /**
      * Some testing value
      *
-     * @var string
+     * @var mixed
      */
     protected $value = '';
 
     /**
      * Constructor
      *
-     * @param string $value
+     * @param mixed $value
      *            Value to be set
      */
     public function __construct($value = 'value')
