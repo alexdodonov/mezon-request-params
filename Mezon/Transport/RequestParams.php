@@ -29,10 +29,10 @@ abstract class RequestParams implements RequestParamsInterface
     /**
      * Constructor
      *
-     * @param Router $router
+     * @param ?Router $router
      *            Router object
      */
-    public function __construct(Router &$router)
+    public function __construct(?Router &$router)
     {
         $this->router = $router;
     }
