@@ -18,7 +18,7 @@
 	},
 	"require": {
 		"php": ">=7.2.0",
-		"mezon/router" : "1.4.*"
+		"mezon/router" : "1.5.*"
 	},
 	"support": {
 		"email": "alexey@dodonov.pro",
@@ -39,5 +39,10 @@
 		"infection" : "php ./vendor/infection/infection/bin/infection",
 		"psalm-self": "php ./vendor/vimeo/psalm/psalm --config=psalm-self.xml --show-info=true --no-cache",
 		"test-unit": "php ./vendor/phpunit/phpunit/phpunit --testsuite unit"
+	},
+	"config": {
+		"allow-plugins": {
+			"infection/extension-installer": true
+		}
 	}
 }
